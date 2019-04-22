@@ -1,0 +1,90 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #223e21;
+	text-align: center;
+    
+}
+
+header{
+    width: 80%;
+    height: 300px;
+    background-image: url(../img/preto.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: auto;
+    position: relative;
+}
+
+label{
+    font-family: sans-serif, Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+input{
+border-radius: 10px;
+height: 40px;
+
+}
+
+button{
+    color: #fff;
+    font-size: 1.0em;
+    font-weight: bold;
+    margin: auto;
+    margin-top: 5%;
+    width:30%;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #223e21;
+   
+}
+
+button:hover {
+background-color: #223e21;
+box-shadow: #000 1.5px 2px 1.5px;
+font-weight: bold;
+color: #fff;
+}
+
+button:hover a {
+text-decoration: underline;
+}
+
+.text {
+    font-family: sans-serif, Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(50, 37, 109);
+    font-style: italic;
+    
+}
+
+.text2 {
+    width: 20%;
+    font-family: sans-serif, Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(50, 37, 109);
+    font-style: italic;
+    
+}
+a{  width: 28%;
+    margin: auto;
+    
+}
+
+form {
+    display: flex;
+	color: black;
+	flex-direction: column;
+    padding: 5%;
+	width: 50%;
+	background-color: white;
+	margin: auto; 
+    margin-top: 5%;
+	text-align: center;
+	line-height: 55px;
+	font-size: 20px;
+	border-radius: 10px;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+xmlns="http://www.w3.org/1999/xhtml" 
+		xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title> Cadastro de Usuário</title>
+    <link rel="stylesheet" type="text/css" href="css/cadastro.css" />
+    
+<nav class="menu">
+	<ul>
+		<li><a href="/">Home</a></li>
+	</ul>
+
+   
+</nav>    
+
+</head>
+
+<body>
+
+    <header></header>
+    
+    <div class="container">
+	<form method="post">
+	
+		<label>E-mail:</label><input type="text" value="" name="login" placeholder="Informe seu usuário" required="required"/>
+		<label>Cargo:</label><input type="text" value="" name="cargo" placeholder="Informe seu cargo" required="required"/> 
+        <label>Senha:</label><input type="password" value="" name="senha" placeholder="Informe sua senha" required="required" />
+		<button type="submit">Cadastrar</button>
+		
+		
+	</form>
+</div>
+    
+    
+</body>
+
+</html>
