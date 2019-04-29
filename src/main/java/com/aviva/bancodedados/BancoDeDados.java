@@ -17,7 +17,7 @@ public class BancoDeDados {
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
         dataSource.setUrl("jdbc:mysql://localhost:3306/aviva");
         dataSource.setUsername("root");
-        dataSource.setPassword("abcde1234");
+        dataSource.setPassword("");
 
         dataSource.setPassword("");
 

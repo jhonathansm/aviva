@@ -16,7 +16,7 @@ public class UsuarioController {
 	UsuarioRepository ur;
 	
 	private String recebeLogin;
-
+	
 	@RequestMapping(value="/cadastro", method=RequestMethod.GET)
 	public String cadastro() {
 		return "cadastro/cadastro";
@@ -24,15 +24,9 @@ public class UsuarioController {
 	
 	@RequestMapping(value="/cadastro", method = RequestMethod.POST)
 	public String cadastro(Usuario usuario, RedirectAttributes attributes) {
-		usuario.setId(ur.count());
 		ur.save(usuario);
 		attributes.addFlashAttribute("mensagem", "Usuário cadastrado com sucesso");
 		return "redirect:/cadastro";
-	}
-	
-	@RequestMapping(value="/esqueceusenha", method=RequestMethod.GET)
-	public String esqueceu() {
-		return "esqueceusenha";
 	}
 	
 	
@@ -53,8 +47,13 @@ public class UsuarioController {
 		}else {
 			return "redirect:/index";
 		}
+		
+	
 	}
 	
-	
+	@RequestMapping(value="/esqueceusenha", method=RequestMethod.GET)
+	public String esqueceu() {
+		return "esqueceusenha";
+	}
 	
 }

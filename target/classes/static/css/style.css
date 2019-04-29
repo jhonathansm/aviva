@@ -4,7 +4,7 @@ html, body{
 }
 
 body{
-    background: #223e21;
+    
 	text-align: center;
     
 }
@@ -40,12 +40,14 @@ button{
     height: 40px;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #223e21;
+    background-color: #2E8B57;
    
 }
 
+
+
 button:hover {
-background-color: #223e21;
+background-color: #2E8B57;
 box-shadow: #000 1.5px 2px 1.5px;
 font-weight: bold;
 color: #fff;
@@ -57,7 +59,7 @@ text-decoration: underline;
 
 .text {
     font-family: sans-serif, Verdana, Geneva, Tahoma, sans-serif;
-    color: rgb(50, 37, 109);
+    color: white;
     font-style: italic;
     
 }
@@ -65,7 +67,7 @@ text-decoration: underline;
 .text2 {
     width: 20%;
     font-family: sans-serif, Verdana, Geneva, Tahoma, sans-serif;
-    color: rgb(50, 37, 109);
+    color: white;
     font-style: italic;
     
 }
@@ -76,11 +78,11 @@ a{  width: 28%;
 
 form {
     display: flex;
-	color: black;
+	color: #fff;
 	flex-direction: column;
     padding: 5%;
 	width: 50%;
-	background-color: white;
+	background-color: #223e21;
 	margin: auto; 
     margin-top: 5%;
 	text-align: center;

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+		xmlns="http://www.w3.org/1999/xhtml" 
+		xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title> Lista de Visitantes</title>
+    <link rel="stylesheet" type="text/css" href="css/lista.css" />
+   	<link rel="stylesheet" type="text/css" href="css/contador.css" /> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   	
+
+</head>
+
+<body>
+<nav class="menu">
+	<ul>
+		<li><a href="Index.html">Home</a></li>
+        <li><a href="cadastroVisitantes">Cadastro de Visitantes</a></li>
+		
+		
+	</ul>
+
+   
+</nav> 
+    <header></header>
+    
+<div class="container">
+    
+    <table>
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Telefone</th>
+      <th scope="col">E-mail</th>
+      <th scope="col">Enviar</th>
+      <th scope="col">Deletar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="visitante : ${visitantes}">
+      <th scope="row" class="count"></th>
+      <td><span th:text="${visitante.nome}"></span></td>
+      <td><span th:text="${visitante.telefone}"></span></td>
+      <td><span th:text="${visitante.email}"></span></td>
+      <td><a class="btn"></a><i class="material-icons left" >email</i></td>
+	  <td><a class="btn waves-effect waves-light" th:href="${(#mvc.url('LC#deletarVisitante').arg(0, visitante.email)).build()}"><i class="material-icons left" >delete_forever</i></a></td>
+	  
+    </tr>
+  </tbody>
+</table>
+<script>
+    var tables = document.getElementsByTagName('table');
+    var table = tables[tables.length];
+    var rows = table.rows;
+    for(var i = 0, td; i < rows.length; i++){
+        td = document.createElement('td');
+        td.appendChild(document.createTextNode(i + 1));
+        rows[i].insertBefore(td, rows[i].firstChild);
+    }
+</script>
+</div>
+    
+    
+</body>
+
+</html>
