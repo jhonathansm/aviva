@@ -42,9 +42,9 @@ public class CadastroController {
 	}
 	
 	@RequestMapping(value="/cadastroVisitantes", method=RequestMethod.POST)
-	public String cadastrar(cadastrarVisitantes visitante) {
+	public String cadastrar(cadastrarVisitantes visitante, RedirectAttributes attributes) {
 			vr.save(visitante);
-
+			attributes.addFlashAttribute("mensagem", "Usuário cadastrado com sucesso!");
 			return "redirect:/cadastroVisitantes";
 		
 	}
