@@ -8,6 +8,8 @@
     <link rel="stylesheet" type="text/css" href="css/lista.css" />
    	<link rel="stylesheet" type="text/css" href="css/contador.css" /> 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+      
    	
 
 </head>
@@ -15,7 +17,7 @@
 <body>
 <nav class="menu">
 	<ul>
-		<li><a href="Index.html">Home</a></li>
+		<li><a href="/">Home</a></li>
         <li><a href="cadastroVisitantes">Cadastro de Visitantes</a></li>
 		
 		
@@ -45,11 +47,13 @@
       <td><span th:text="${visitante.telefone}"></span></td>
       <td><span th:text="${visitante.email}"></span></td>
       <td><a class="btn"></a><i class="material-icons left" >email</i></td>
-	  <td><a class="btn waves-effect waves-light" th:href="${(#mvc.url('LC#deletarVisitante').arg(0, visitante.email)).build()}"><i class="material-icons left" >delete_forever</i></a></td>
+	  <td><a class="btn waves-effect waves-light" th:href="${(#mvc.url('LC#deletarVisitante').arg(0, visitante.email)).build()}"><i class="material-icons">delete_forever</i></a></td>
 	  
     </tr>
   </tbody>
 </table>
+ 
+
 <script>
     var tables = document.getElementsByTagName('table');
     var table = tables[tables.length];

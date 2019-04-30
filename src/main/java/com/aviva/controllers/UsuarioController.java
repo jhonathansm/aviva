@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.aviva.model.Usuario;
@@ -17,38 +18,47 @@ public class UsuarioController {
 	
 	private String recebeLogin;
 	
-	@RequestMapping(value="/cadastro", method=RequestMethod.GET)
-	public String cadastro() {
-		return "cadastro/cadastro";
+	@RequestMapping(value="/", method=RequestMethod.GET)
+	public String index() {
+		return "index";
 	}
 	
-	@RequestMapping(value="/cadastro", method = RequestMethod.POST)
-	public String cadastro(Usuario usuario, RedirectAttributes attributes) {
-		ur.save(usuario);
-		attributes.addFlashAttribute("mensagem", "Usuário cadastrado com sucesso");
-		return "redirect:/cadastro";
-	}
-	
-	
-	@RequestMapping(value ="/login", method = RequestMethod.POST)
+	@RequestMapping(value ="/", method = RequestMethod.POST)
 	public String login(Usuario usuario) {
-		if(ur.findByLogin(usuario.getLogin()) != null) {
-			if(ur.findByLogin(usuario.getLogin()).getSenha().equals(usuario.getSenha())) {
-				recebeLogin = usuario.getLogin();
-				
-				if(ur.findByLogin(usuario.getLogin()).getCargo().equals("Presbitero")) {
-					return "redirect:/efetuouLoginAdm";
+		
+		if(ur.findByLogin(usuario.getLogin()) != null ) { 
+				if(ur.findByLogin(usuario.getLogin()).getSenha().equals(usuario.getSenha())) {
+					recebeLogin = usuario.getLogin();
+		
+				if(ur.findByLogin(usuario.getLogin()).getCargo().equals("Adm")){
+					
+					return "redirect:/loginAdm";
 				}else {
-					return "redirect:/efetuouLogin";
+					
+					return "redirect:/loginComum";
 				}
 			}else {
+				
 				return "redirect:/index";
 			}
-		}else {
-			return "redirect:/index";
 		}
-		
+		return "redirect:/index";
+	}
 	
+	@RequestMapping(value="/loginAdm", method=RequestMethod.GET)
+	public ModelAndView loginAdm() {
+		Usuario usuario = ur.findByLogin(recebeLogin);
+		ModelAndView mav = new ModelAndView("login/loginAdm");
+		mav.addObject("usuario", usuario);
+		return mav;
+	}
+	
+	@RequestMapping(value="/loginComum", method=RequestMethod.GET)
+	public ModelAndView loginComum() {
+		Usuario usuario = ur.findByLogin(recebeLogin);
+		ModelAndView mav = new ModelAndView("login/loginComum");
+		mav.addObject("usuario", usuario);
+		return mav;
 	}
 	
 	@RequestMapping(value="/esqueceusenha", method=RequestMethod.GET)

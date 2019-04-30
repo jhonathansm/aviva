@@ -14,7 +14,9 @@ xmlns="http://www.w3.org/1999/xhtml"
 <body>
 <nav class="menu">
 	<ul>
-		<li><a href="/">Home</a></li>
+		<li><a href="loginAdm">Home</a></li>
+		<li><a href="lista">Lista de Visitantes</a></li>
+		<li><a href="listauser">Lista de usuários</a></li>
 	</ul>
 
    
@@ -25,7 +27,9 @@ xmlns="http://www.w3.org/1999/xhtml"
 	<form method="post">
 	
 		<label>E-mail:</label><input type="text" value="" name="login" placeholder="Informe seu usuário" required="required"/>
-		<label>Tipo:</label><input type="text" value="Comum" readonly=true name="cargo" required="required"/> 
+		<label>Tipo:</label><select name="tipo" required>
+					<option value="Comum">Comum</option>
+					<option value="Adm">Adm</option> 
         <label>Senha:</label><input type="password" value="" name="senha" placeholder="Informe sua senha" required="required" />
 		<button type="submit">Cadastrar</button>
 		

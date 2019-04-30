@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+xmlns="http://www.w3.org/1999/xhtml" 
+		xmlns:th="http://thymeleaf.org">
+<head>
+	<meta charset="UTF-8"/>
+	<title>Sistema de Visitantes</title>
+    <link rel="stylesheet" type="text/css" href="css/comum.css" />
+</head>
+
+<body>
+
+<nav class="menu">
+	<ul>
+		<li><a href="loginComum">Home</a></li>
+        <li><a href="lista">Lista de Visitantes</a></li>
+		
+		
+	</ul>
+
+   
+</nav>
+  <header></header>
+  
+<div th:each="usuario : ${usuario}">
+		<h2 th:text="${'Bem vindo -  ' + usuario.login}"></h2>
+
+
+</div>
+    
+    
+
+</body>
+
+</html>

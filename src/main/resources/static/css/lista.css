@@ -8,6 +8,7 @@ body{
     
 }
 
+
 .menu{
     margin: 0;
 	width: 100%;
@@ -116,7 +117,7 @@ a{  width: 28%;
 }
 
 .container {
-display: flex;
+	display: flex;
 	color: black;
 	flex-direction: column;
     padding: 5%;
