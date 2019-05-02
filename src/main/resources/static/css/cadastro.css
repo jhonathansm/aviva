@@ -1,39 +1,38 @@
 * {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
-body{
+body {
 	text-align: center;
-    
 }
 
-nav{
-    width: 100%;
-    
+nav {
+	width: 100%;
 }
-.menu{
-    margin: 0;
+
+.menu {
+	margin: 0;
 	height: 52px;
 	background-color: #223e21;
-	font-family: "Arial",Arial,Tahoma,sans-serif;
+	font-family: "Arial", Arial, Tahoma, sans-serif;
 	font-size: 1em;
 	box-shadow: #223e21 1.5px 2px 1.5px;
-    z-index: auto;
-    
+	z-index: auto;
 }
-.menu ul{
+
+.menu ul {
 	list-style: none;
 	position: relative;
 }
 
-.menu ul li{
+.menu ul li {
 	width: 183px;
 	float: left;
 }
 
-.menu a{
-    width: 140px;
+.menu a {
+	width: 140px;
 	padding: 15px;
 	display: block;
 	text-decoration: none;
@@ -41,92 +40,92 @@ nav{
 	color: #fff;
 }
 
-
-.menu ul ul{
+.menu ul ul {
 	position: fixed;
 	visibility: hidden;
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
-.menu ul li:hover ul{
+.menu ul li:hover ul {
 	visibility: visible;
 }
 
-.menu a:hover{
-    
-    border-bottom: 2px solid white;
-    color: #fff;
+.menu a:hover {
+	border-bottom: 2px solid white;
+	color: #fff;
 }
 
-.menu ul ul li{
+.menu ul ul li {
 	float: none;
 	border-bottom: solid 1px #ccc;
-    padding: 0;
+	padding: 0;
 }
 
-
-header{
-    width: 80%;
-    height: 300px;
-    background-image: url(../img/preto.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    margin: auto;
-    position: relative;
+header {
+	width: 80%;
+	height: 300px;
+	background-image: url(../img/preto.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin: auto;
+	position: relative;
 }
 
-label{
-    font-family: sans-serif, Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
+label {
+	font-family: sans-serif, Verdana, Geneva, Tahoma, sans-serif;
+	font-weight: bold;
 }
 
-input{
-border-radius: 10px;
-height: 40px;
-
+input {
+	border-radius: 10px;
+	height: 40px;
 }
 
-button{
-    color: #fff;
-    font-size: 1.0em;
-    font-weight: bold;
-    margin: auto;
-    margin-top: 5%;
-    width:30%;
-    height: 40px;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #2E8B57;
-   
+select {
+	border-radius: 10px;
+	height: 40px;
+}
+
+}
+button {
+	color: #fff;
+	font-size: 1.0em;
+	font-weight: bold;
+	margin: auto;
+	margin-top: 5%;
+	width: 30%;
+	height: 40px;
+	border-radius: 5px;
+	cursor: pointer;
+	background-color: #2E8B57;
 }
 
 button:hover {
-background-color: #2E8B57;
-box-shadow: #000 1.5px 2px 1.5px;
-font-weight: bold;
-color: #fff;
+	background-color: #2E8B57;
+	box-shadow: #000 1.5px 2px 1.5px;
+	font-weight: bold;
+	color: #fff;
 }
 
 button:hover a {
-text-decoration: underline;
+	text-decoration: underline;
 }
 
-
-a{  width: 28%;
-    margin: auto;
-    
+a {
+	width: 28%;
+	margin: auto;
 }
 
 form {
-    display: flex;
+	display: flex;
 	color: #fff;
 	flex-direction: column;
-    padding: 5%;
+	padding: 5%;
 	width: 50%;
 	background-color: #223e21;
-	margin: auto; 
-    margin-top: 5%;
+	margin: auto;
+	margin-top: 5%;
 	text-align: center;
 	line-height: 55px;
 	font-size: 20px;

@@ -58,7 +58,7 @@ public class CadastroController {
 	
 	@RequestMapping(value="/cadastroAdm", method=RequestMethod.GET)
 	public String cadastroDm() {
-		return "redirect:/cadastroAdm";
+		return "cadastro/cadastroAdm";
 	}
 	
 	
